@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contato | SS Developer</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">                                            <!-- https://getbootstrap.com/ -->
+        <link rel="stylesheet" href="../static/css/fontawesome-all.min.css">                                      <!-- Font awesome -->
+        <link rel="stylesheet" href="../static/css/tooplate-style.css">
+        <link rel="stylesheet" href="../static/css/styles.css">                                           
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+        </style>
+        <script>
+        var renderPage = true;
+
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+        </script>
+  </head>
+
+    <body>
+         <!-- Loader -->
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+  
+        <div class="tm-welcome-section">
+            <div class="container tm-navbar-container">
+              <div class="row">
+                <div class="col-xl-12">
+                  <nav class="navbar navbar-expand-sm">
+                      <a class="owl1" href="/">
+                          <img src=" {{ url_for('static', filename='img/logo33.png') }} " alt="">
+                      </a>
+                    <ul class="navbar-nav ml-auto">
+                        
+                      <li class="nav-item active">
+                        <a href="/" class="nav-link tm-nav-link tm-text-white active">Início</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a href="/contato" class="nav-link tm-nav-link tm-text-white">Contato</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                          <a href="/new" class="nav-link tm-nav-link tm-text-white">Novo Livro</a>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+    
+            <div class="container text-center tm-welcome-container">
+              <div class="tm-welcome">
+                <i class="fa fa-book fa-5x" aria-hidden="true"></i>
+                <hr>
+                <h1>SS Dev | Book Catalogo</h1>
+                <p class="tm-site-description">Seu melhor catálogo de livros</p>
+              </div>
+            </div>
+    
+          </div>
+          <hr id="linha2"></hr>
+
+        <header id="banner">
+            <div>
+                <h1>
+                   Encha-se de experiência e conhecimento, quando estiver pronto voe o mais alto que puder.
+                </h1>
+                <span>Autor Desconhecido</span>
+                
+            </div>
+            <img src="{{url_for('static', filename='img/ssdev.png')}}" alt="">
+            
+        </header>
+        <header id="banner2">
+            <div>
+            <p id="paragrafo1">Conheça meus perfis sociais e conecte-se! </p>
+            </div>
+            <hr>
+        </header>   
+        <section id="contato">
+            <div id="icons">
+                <a href="https://www.linkedin.com/in/steffany-sympson/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/SteffanySympson" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.instagram.com/srta.sympson/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section> 
+        <!-- <hr id="linha"></hr> -->
+
+        <footer>
+            <hr>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>All rights reserved  | <a target="_blank" href="https://portfoliossympson.herokuapp.com/">SS Developer</a> &copy;<i class="fa fa-heart" aria-hidden="true"></i></p>
+            
+        </footer>
+
+        <!-- load JS -->
+      <script src="../static/js/jquery-3.2.1.slim.min.js"></script> 
+      <script>
+  
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function () {
+  
+          if (renderPage) {
+            $('body').addClass('loaded');
+          }
+  
+          $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
+        });
+  
+      </script>
+
+
+    </body>
+
+</html>          
+
+          

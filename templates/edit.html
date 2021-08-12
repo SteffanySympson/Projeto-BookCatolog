@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book Catalog | Edição</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">                                            <!-- https://getbootstrap.com/ -->
+        <link rel="stylesheet" href="../static/css/fontawesome-all.min.css">                                      <!-- Font awesome -->
+        <link rel="stylesheet" href="../static/css/tooplate-style.css">
+        <link rel="stylesheet" href="../static/css/styles.css">                                           
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+        </style>
+        <script>
+        var renderPage = true;
+    
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+        </script>
+      </head>
+
+    <body>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+
+        
+        <section id="new">
+            <h4>Editar Livro</h4> 
+            <a href="/">
+            <img id="gif" src="{{ url_for('static', filename='img/livro.gif') }}" alt=""> 
+            </a>        
+            <div id="card">
+                
+
+                <form action="/edit/{{livro.id}}" method="POST">
+                
+                    <div class="label-flutuante">
+                        <input type="text" id="titulo" name="titulo" placeholder=" " required value = "{{livro.titulo}}">
+                        <label for="titulo">Título</label>
+                    </div>
+                        
+
+                    <div class="label-flutuante">
+                        <input type="text" name="autor" id="autor" placeholder=" " required value = "{{livro.autor}}">
+                        <label for="autor">Autor</label>
+                    </div>
+
+                    <div class="label-flutuante">
+                        <input type="text" name="capa" id="capa" placeholder=" " required value = "{{livro.capa}}">
+                        <label for="capa">Capa</label>
+                    </div>
+
+                    <div class="label-flutuante">
+                        <input type="text" name="sinopse" id="sinopse" placeholder=" " required value = "{{livro.sinopse}}">
+                        <label for="sinopse">Sinopse</label>
+                    </div>
+
+                
+                    <div class="label-flutuante">
+                        <input type="text" name="link" id="link" placeholder=" " required value = "{{livro.link}}">
+                        <label for="link">Link</label>
+                    </div>
+
+                
+                    <div class="justify-center">
+                        <button type="submit">Atualizar</button>
+                    </div>
+                </form>
+            </div>
+            
+
+        </section>    
+
+        <footer>
+            <hr>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>All rights reserved  | <a target="_blank" href="https://portfoliossympson.herokuapp.com/">SS Developer</a> &copy;<i class="fa fa-heart" aria-hidden="true"></i></p>
+            
+        </footer>
+
+        <!-- load JS -->
+      <script src="../static/js/jquery-3.2.1.slim.min.js"></script> 
+      <script>
+  
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function () {
+  
+          if (renderPage) {
+            $('body').addClass('loaded');
+          }
+  
+          $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
+        });
+  
+      </script>
+      
+    </body>
+
+</html>

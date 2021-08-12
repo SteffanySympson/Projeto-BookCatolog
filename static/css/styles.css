@@ -1,0 +1,744 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: pequena, 'Roleway',sans-serif;
+    letter-spacing: .1rem;
+}
+
+@font-face{
+    font-family: pequena;
+    src: url("../font/pequena\ sereia.ttf")
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* ESTILOS DE PÁGINA INDEX.HTML */
+
+
+
+nav a img{
+    max-width: 100%;
+    width: 8rem;
+    padding: .1rem;
+    margin-left: 1rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    COLOR: #ffffff;
+    transition: all 0.4s ease-out;
+    font-size: 2rem;
+}
+
+nav ul li a:hover{
+    color: #9bf6ff;
+}
+
+
+
+/* PLAYLIST */
+
+section#playlist{
+    max-width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+    background-color:#c0ecfd8a;
+    
+}
+
+section#playlist h3{
+    text-align: center;
+    color:#b5179e;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px #ffffff;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+}
+
+section#playlist table{
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    
+}
+
+section#playlist table th, td{
+    padding: 1rem;
+    border-bottom: 1px solid #0077b6;
+    text-align: center;
+    align-items: center;
+    font-family:'Lucida Sans';
+    
+}
+
+section#playlist table a{
+    padding: 1rem;
+    color: #0077b6;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+section#playlist table a:hover{
+    color: #b5179e;
+}
+
+
+/*---------------------
+   Footer section
+ -----------------------*/
+
+footer i {
+	color: #d32a2a;
+}
+
+footer p{
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer hr{
+    width: 60%;
+    margin: auto;
+    border: 0.2px solid #0077b6;
+}
+
+footer a{
+    text-decoration: none;
+    color: #0077b6;
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover{
+    color: #b5179e;
+}
+
+/* FIM DOS ESTILOS DE PÁGINA INDEX.HTML */
+
+/* ESTILOS DA PÁGINA NEW */
+
+
+
+section#new{
+    width: 100%;
+}
+
+section#new div#card form{
+    width: 80%;
+}
+
+section#new div#card{
+    position: absolute;
+    display: flex;
+    background-color: #C6FFDD;
+    padding: 3px;
+    border-radius:  2%;
+    border: 1px solid #f7797d;
+    box-shadow: #0077b6;
+    width: 100%;
+}
+
+
+
+section#new div.label-flutuante input{
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    border: 0;
+    border-bottom: 2px solid #0077b6;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    border-radius: 0; 
+}
+
+section#new div.label-flutuante input:focus{
+    border-bottom: 2px solid #ff5e64;
+}
+
+section#new div.label-flutuante label{
+    color: #ff5e64;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1px;
+    transition: all 0.3s ease-out;
+}
+
+
+section#new button {
+    background-color: transparent;
+    border-color: #ff5e64;
+    color: #b5179e;
+    padding: 0.8rem;
+    font-size: 12pt;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease-out;
+}
+
+section#new button:hover{
+    background-color: #0077b6;
+    border-color: #00507a;
+    color: #9bf6ff
+}
+
+section#new h4{
+    text-align: right;
+    color: #f7797d;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px #ffffff;
+    margin-bottom: 2rem;
+    display: flex;
+    margin-right: 5rem;
+}
+
+/* ESTILOS DO MODAL */
+
+section.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #FBD786;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+section.modal div#card{
+    width:30rem;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: .5rem;
+    padding: 4rem;
+}
+
+section.modal div#card h2{
+    padding: 2rem;
+    margin: 0;
+    color: #f7797d;
+}
+
+section.modal div#card a#fechar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: #a00005;
+    padding: 1.5rem;
+}
+
+section.modal div#card a#fechar:hover{
+    color: #f7797d;
+}
+
+section.modal div#card hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.modal div#card p{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+section.modal div#card div#btns{
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a{
+    text-decoration: none;
+    padding: .9rem;
+    border-radius: .5rem;
+    width: 7rem;
+    text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar{
+    background: #f7797d;
+    color: #ffffff;
+    border: solid 1px #b5179e;
+    margin-right: 1.5rem;
+    transition: all .5s ease-in-out;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover{
+    background: #ffffff;
+    color: #f7797d;
+}
+
+section.modal div#card div#btns a.btn-apagar{
+    background: #9bf6ff;
+    color: #0077b6;
+    border: solid 1px #00507a;
+    transition: all .5s ease-in-out;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover{
+    background: #0077b6;
+    color: #9bf6ff;
+    border: solid 1px #00507a;
+}
+
+/* ---------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: pequena, sans-serif;
+    letter-spacing: .1rem;
+}
+
+@font-face{
+    font-family: pequena;
+    src: url("../font/pequena\ sereia.ttf")
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* ESTILOS DE PÁGINA INDEX.HTML */
+
+
+.owl1 img{
+    max-width: 100%;
+    width: 8rem;
+    padding: .1rem;
+    margin-left: 1rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.4s ease-out;
+    font-size: 2rem;
+}
+
+nav ul li a:hover{
+    color: #9bf6ff;
+}
+
+
+
+header#banner{
+    background: #ffffffb7;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 1rem;
+    
+}
+
+header#banner2{
+    background: #ffffffb7;
+    padding: .5rem;
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 1rem;
+}
+
+header#banner2 p{
+    
+    font-family:'Lucida Sans';
+    text-shadow: 2px 2px 5px #00000050;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: .5rem;
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+    min-height: 1rem;
+    line-height: 2rem;
+}
+
+header#banner2 p#paragrafo1{
+    color: #ce3664;
+}
+
+header#banner2 p#paragrafo2{
+    color: #0076b6af;
+}
+
+hr#linha2{
+    width: 100%;
+    margin: auto;
+    border: 0.2px dashed #ff5eaf;
+}
+
+hr#linha{
+    width: 100%;
+    margin: auto;
+    border: 0.2px dashed #20a0e6;
+}
+
+header#banner img{
+    border-radius:40px;
+    width: 40%;
+    margin-top: 0.1rem;
+}
+
+header#banner div{
+    width: 100%;
+}
+
+header#banner div h1{
+    font-size: 2.5rem;
+    color: #b5179e;
+    text-shadow: 2px 2px 5px #00000050;
+    text-align: left;
+}
+
+header#banner div span{
+    font-size: 1rem;
+    color: #0077b6;
+    text-shadow: 2px 2px 5px #00000050;
+    margin-top: 20px;
+}
+
+
+/* PLAYLIST */
+
+section#playlist{
+    max-width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+    background: linear-gradient(to right, #ddd6f3, #faaca8);
+}
+
+section#playlist h3{
+    text-align: center;
+    color:#b5179e;
+    font-size: 3rem;
+    text-shadow: 1px 1px 5px #0076b6cc;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;   
+}
+
+section#playlist img{
+    display: flex;
+    width: 7rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: .1rem;
+    padding: 0rem;
+}
+
+section#playlist table{
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+}
+
+section#playlist table th, td{
+    padding: 1rem;
+    border-bottom: 1px solid #0077b6;
+    text-align: center;
+    color: #2b2a2a;
+    
+}
+
+section#playlist table a{
+    padding: 1rem;
+    color: #0077b6;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+section#playlist table a:hover{
+    color: #b5179e;
+}
+
+
+
+/* FIM DOS ESTILOS DE PÁGINA INDEX.HTML */
+
+/* ESTILOS DA PÁGINA NEW */
+
+section#new {
+    background: linear-gradient(to right, #be93c5, #7bc6cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+section#new img#home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+section#new img#gif{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 15rem;
+    margin: 0;
+    padding: 1rem;
+    align-items: left;
+}
+
+section#new div#card{
+    position: relative;
+    content:center;
+    background-color: #C6FFDD;
+    padding: 1rem;
+    border-radius:  2%;
+    border: 1px solid #f7797d;
+    box-shadow: #0077b6;
+    width: 400px;
+    
+}
+
+section#new div.label-flutuante{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section#new div.label-flutuante input{
+    width: 100%;
+    padding: 20px 15px;
+    /* display: inline-block; */
+    border: 0;
+    border-bottom: 2px solid #0077b6;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    border-radius: 0; 
+}
+
+section#new div.label-flutuante input:focus{
+    border-bottom: 2px solid #ff5e64;
+}
+
+section#new div.label-flutuante label{
+    color: #ff5e64;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1px;
+    transition: all 0.3s ease-out;
+}
+
+section#new div.label-flutuante input:focus + label, section#new-music div.label-flutuante input:valid + label{
+    font-size: 18px;
+    margin-top: 0;
+    color: #ff5eaf;
+   
+}
+
+section#new div.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+section#new button {
+    background-color: transparent;
+    border-color: #ff5e64;
+    color: #b5179e;
+    padding: 0.8rem;
+    font-size: 12pt;
+    margin-top: 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease-out;
+    align-items: center;
+}
+
+section#new button:hover{
+    background-color: #0077b6;
+    border-color: #00507a;
+    color: #9bf6ff
+}
+
+section#new h4{
+    text-align: right;
+    color: #ffffff;
+    font-size: 5rem;
+    text-shadow: 1px 1px 5px #00507a;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+
+/* ESTILOS DO MODAL */
+
+section.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #FBD786;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+section.modal div#card{
+    width:30rem;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: .5rem;
+    padding: 4rem;
+}
+
+section.modal div#card h2{
+    padding: 2rem;
+    margin: 0;
+    color: #f7797d;
+}
+
+section.modal div#card a#fechar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: #a00005;
+    padding: 1.5rem;
+}
+
+section.modal div#card a#fechar:hover{
+    color: #f7797d;
+}
+
+section.modal div#card hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.modal div#card p{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+section.modal div#card div#btns{
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a{
+    text-decoration: none;
+    padding: .9rem;
+    border-radius: .5rem;
+    width: 7rem;
+    text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar{
+    background: #f7797d;
+    color: #ffffff;
+    border: solid 1px #b5179e;
+    margin-right: 1.5rem;
+    transition: all .5s ease-in-out;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover{
+    background: #ffffff;
+    color: #f7797d;
+}
+
+section.modal div#card div#btns a.btn-apagar{
+    background: #9bf6ff;
+    color: #0077b6;
+    border: solid 1px #00507a;
+    transition: all .5s ease-in-out;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover{
+    background: #0077b6;
+    color: #9bf6ff;
+    border: solid 1px #00507a;
+}
+
+/*----------------------------------------------------------------*/
+
+/*CONTATO*/
+
+ 
+ section#contato div#icons{
+    display: flex;
+    justify-content: center;
+    
+ }
+ 
+ section#contato  div#icons a{
+    text-decoration: none; 
+    color: #0077b6;
+    font-size: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    transition:  .4s ease-in-out; 
+ }
+ 
+ section#contato  div#icons a:hover{
+    color: #f7797d;
+ }
+ 
+ section#contato  div#icons a i{
+    transition:  .4s ease-in-out;
+ }
+ 
+ section#contato  div#icons a i:hover{
+    transform: scale(1.5);
+ }
+
+
+ section#playlist td#linkexterno a img{
+    color: #ffffff;
+    width: 5rem;
+ }
